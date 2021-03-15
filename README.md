@@ -2,7 +2,7 @@ Semantic segmentation of remote sensing images based on Deeplab-v3
 
 
 data set:
-The AI ​​classification and recognition of CCF satellite imagery provides a training set for the 
+The AI ​​classification and recognition of CCF satellite imagery. 
 
 
 dataset
@@ -38,19 +38,54 @@ Among them, we use the first four for training and the last one for testing
 | resnet-v2-50 pretrain | 77.1 |-|
 | Rotate four predictions and average | 77.6 | 85.5 |
 
+### How to train
+```
+Download and store the dataset folder dataset in Baidu Cloud to the main directory of the project
+python proprecess.py takes a little longer and needs to wait
+python train.py takes a little longer, you can change how often args.test_display to view the test results
+```  
  
 ###Final Results:
 	The evaluation method is mean-IoU. In the case of very few data sets, the test set evaluation result gets a score of 77.3
 
-Method mean-IoU accuracy
-baseline(deeplabv3) 71.2-
-resnet-v2-50 pretrain 77.1-
-Rotate four predictions and average 77.6 85.5
-How to train
-Download and store the dataset folder dataset in Baidu Cloud to the main directory of the project
-python proprecess.py takes a little longer and needs to wait
-python train.py takes a little longer, you can change how often args.test_display to view the test results
-How to visualize the training process
+### Method mean-IoU accuracy
+	baseline(deeplabv3) 71.2-
+	resnet-v2-50 pretrain 77.1-
+	Rotate four predictions and average 77.6 85.5
+	
+### How to train
+	Download and store the dataset folder dataset in Baidu Cloud to the main directory of the project
+	python proprecess.py takes a little longer and needs to wait
+	python train.py takes a little longer, you can change how often args.test_display to view the test results
+
+
+### How to visualize the training process
+```
 cd to the home directory
 tensorboard --logdir=./
-Test Results:
+```
+### Test Results:
+<table border=0>
+<tr>
+    <td><img src="/images/step_10000.png" border=0 margin=1 width=512></td>
+    <td><img src="/images/step_50000.png" border=0 margin=1 width=512></td>
+</tr>
+<tr>
+    <td>Model prediction step = 10000</td>
+    <td>Model prediction step = 50000</td>
+</tr>
+<tr>
+    <td><img src="images/5_view.png" border=0 margin=1 width=512></td>
+    <td><img src="images/5_color.png" border=0 margin=1 width=512></td>
+</tr>
+<tr>
+    <td>Test image thumbnail</td>
+    <td>Test picture label color map</td>
+</tr>
+</table>
+<tr>
+    <td><img src="images/metric.png" border=0 margin=1></td>
+</tr>
+<tr>
+    <td>tensorboard</td>
+</tr>
