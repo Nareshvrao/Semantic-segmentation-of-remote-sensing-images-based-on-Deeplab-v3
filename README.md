@@ -48,8 +48,6 @@ python proprecess.py takes a little longer and needs to wait
 python train.py takes a little longer, you can change how often args.test_display to view the test results
 ```  
  
-###Final Results:
-	The evaluation method is mean-IoU. In the case of very few data sets, the test set evaluation result gets a score of 77.3
 
 ### Method mean-IoU accuracy
 	baseline(deeplabv3) 71.2-
@@ -92,3 +90,6 @@ tensorboard --logdir=./
 <tr>
     <td>tensorboard</td>
 </tr>
+
+
+Final Results: The evaluation method is mean-IoU. In the case of very few data sets, the test set evaluation result gets a score of 77.3
