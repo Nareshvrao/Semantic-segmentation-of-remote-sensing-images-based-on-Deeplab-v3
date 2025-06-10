@@ -54,10 +54,6 @@ python train.py takes a little longer, you can change how often args.test_displa
 	resnet-v2-50 pretrain 77.1-
 	Rotate four predictions and average 77.6 85.5
 	
-### How to train
-	Download and store the dataset folder dataset in Baidu Cloud to the main directory of the project
-	python proprecess.py takes a little longer and needs to wait
-	python train.py takes a little longer, you can change how often args.test_display to view the test results
 
 
 ### How to visualize the training process
